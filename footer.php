@@ -2,15 +2,31 @@
     <footer>
         <div class="row full">
             <div class="large-12 medium-12 small-12 columns">
-                <div class="large-6 medium-6 small-12 columns large-text-lef medium-text-lef small-only-text-center">
-                    <img src="<?php bloginfo('template_directory'); ?>/img/logo_footer.png" alt="" width="220">
+
+                <div class="large-6 medium-12 small-12 columns">
+                    <div class="logo">
+                        <a href="">
+                            <img src="<?php bloginfo('template_directory'); ?>/img/simunovic_logo.png" alt="">
+                        </a>
+                    </div>
                 </div>
 
-                <div class="large-6 medium-6 small-12 columns small-text-center large-text-right medium-text-right">
-                    <ul>
-                        <li class="empresa">Aiketours</li>
-                        <li>contacto@aiketorus.cl</li>
-                        <li>+569 68652973</li>
+                <div class="large-6 medium-12 small-12 columns">
+                    <ul class="info">
+                        <li class="ciudad">Punta Arenas</li>
+                        <li>KM 13,7 norte - rio seco</li>
+                        <li>tel (56-61) 292810 - fax (56-61) 214699</li>
+                        <li>p.o box 14-d email: nsimunovic@somunovic.cl</li>
+                        <li>wwwimunovic@somunovic.cl</li>
+                    </ul>
+
+                    <br>
+
+                    <ul class="info">
+                        <li class="ciudad">Santiago</li>
+                        <li>Avenida presidente eduardo freo montalva 2091, independencia</li>
+                        <li>tel (56-2) 7341692 - FAX (56-2) 7369299 p.o box 9053</li>
+                        <li>email: interam@interam.cl www-interam.cl</li>
                     </ul>
                 </div>
             </div>
@@ -19,7 +35,7 @@
         <div class="row full croop">
             <div class="large-1 medium-2 small-2 columns large-centered medium-centered small-centered">
                 <a href="https://www.croop.cl/" target="_blank">
-                    <img src="https://www.croop.cl/agencia/wp-content/themes/wp-croop2k18/img/agencia-digital-croop-blanco.png" alt="Agencia Digital Croop">
+                    <img src="https://www.croop.cl/agencia/wp-content/themes/wp-croop2k18/img/agencia-digital-croop-full.png" alt="Agencia Digital Croop">
                     <br>
                 </a>
             </div>

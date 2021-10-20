@@ -1,15 +1,703 @@
 // MQ trigger
 // @import "compass/CSS3";
-@import "colores";
+$color_1:#4fb748;
+$color_2:#012847;
+$color_3:#ffffff;
+$color_4:#1e1e1e;
 
-@mixin small {
-  @media only screen and (max-width: 766px) {
-    @content;
-  }
-}
+
+
+
+
 .full {
     width: 100% !important;
     margin-left: auto;
     margin-right: auto;
     max-width: 100% !important;
+}
+
+header {
+
+    .textura_slider {
+        position: absolute;
+        bottom: 0;
+        z-index: 9999;
+    }
+
+    .orbit-next,
+    .orbit-prev {
+        z-index: 9999 !important;
+    }
+
+    .degradado {
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 20%);
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 20%);
+        background: linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 20%);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 9;
+    }
+
+    #menu {
+        position: absolute;
+        z-index: 999999;
+        width: 100%;
+        padding: 10px;
+
+        hr {
+            background-color: $color_1;
+            border-radius: none;
+            height: 2px;
+            border: none;
+        }
+
+        @media only screen and (max-width: 40em) {
+            padding: 5px;
+        }
+
+        @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+            .top-bar .name {
+                height: 1em;
+                margin: 0;
+            }
+        }
+
+        .top-bar {
+            background-color: rgba(0, 0, 0, 0);
+
+            @media only screen and (max-width: 40em) {
+                z-index: 999999 !important;
+            }
+
+            /* Tamaño logo */
+            .name h1 a,
+            .name span a {
+                width: 40%;
+
+                @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+                    width: 180px;
+                }
+
+                @media only screen and (max-width: 40em) {
+                    width: 20%;
+                }
+            }
+
+            /* Color icon-menu */
+            .toggle-topbar a {
+                color: #fff;
+            }
+
+            /* Color icon */
+            .toggle-topbar.menu-icon a span::after {
+                content: "";
+                display: block;
+                height: 0;
+                position: absolute;
+                margin-top: -8px;
+                top: 50%;
+                right: 0.9375rem;
+                box-shadow: 0 0 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
+                width: 16px;
+            }
+
+            .top-bar-section {
+
+                ul {
+
+                    li,
+                    a {
+                        background-color: rgba(0, 0, 0, 0);
+                        font-family: 'Bebas Neue', cursive;
+                        text-transform: uppercase;
+                        color: $color_3;
+                        font-size: 20px;
+
+                        @media only screen and (min-width: 90.063em) and (max-width: 120em) {
+                            margin-top: 20px;
+                        }
+
+                        @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+                            margin-top: 5px;
+                            font-size: 15px;
+                        }
+
+                        @media only screen and (max-width: 40em) {
+                            text-align: center;
+                            background-color: $color_2;
+                            color: $color_3;
+                        }
+                    }
+
+                    li,
+                    a:hover {
+                        color: $color_1;
+                    }
+                }
+
+            }
+        }
+    }
+
+    #menu_interior {
+        padding: 10px;
+        background-color: $color_2;
+        height: 160px;
+
+        @media only screen and (max-width: 40em) {
+            height: auto;
+        }
+
+        .top-bar {
+            background-color: $color_2;
+            margin-top: 10px;
+
+            @media only screen and (max-width: 40em) {
+                z-index: 999999 !important;
+            }
+
+            /* Tamaño logo */
+            .name h1 a,
+            .name span a {
+                width: 25%;
+
+                @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+                    width: 130px;
+                }
+
+                @media only screen and (max-width: 40em) {
+                    width: 25%;
+                }
+            }
+
+            /* Color icon-menu */
+            .toggle-topbar a {
+                color: #fff;
+            }
+
+            /* Color icon */
+            .toggle-topbar.menu-icon a span::after {
+                content: "";
+                display: block;
+                height: 0;
+                position: absolute;
+                margin-top: -8px;
+                top: 50%;
+                right: 0.9375rem;
+                box-shadow: 0 0 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
+                width: 16px;
+            }
+
+            .top-bar-section {
+
+                ul {
+
+                    li,
+                    a {
+                        background-color: rgba(0, 0, 0, 0);
+                        font-family: 'Roboto Condensed', sans-serif;
+                        text-transform: uppercase;
+                        color: $color_3;
+                        font-size: 20px;
+
+                        @media only screen and (min-width: 64.063em) and (max-width: 90em) {
+                            margin-top: -10px;
+                        }
+
+                        @media only screen and (min-width: 90.063em) and (max-width: 120em) {
+                            margin-top: 10px;
+                        }
+
+                        @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+                            margin-top: 10px;
+                            font-size: 15px;
+                        }
+
+                        @media only screen and (max-width: 40em) {
+                            text-align: center;
+                            background-color: $color_2;
+                            color: $color_3;
+                        }
+
+                    }
+
+                    li,
+                    a:hover {
+                        color: $color_1;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .contenedor_slider {
+        display: flex;
+        align-items: center;
+        align-items: center;
+
+        .texto_slider {
+            position: absolute;
+            width: 100%;
+            z-index: 99;
+
+            .texto {
+
+                h1,
+                h2,
+                h4 {
+                    line-height: 80%;
+                }
+
+                @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+                    margin-top: 3em;
+                }
+
+                @media only screen and (max-width: 40em) {
+                    margin-top: 2em;
+                }
+
+                h2 {
+                    color: $color_3;
+                    font-family: 'Bebas Neue', cursive;
+                    font-size: 60px;
+
+                    @media only screen and (max-width: 40em) {
+                        font-size: 20px;
+                    }
+
+                    span {
+                        color: $color_1;
+                        font-family: 'Bebas Neue', cursive;
+                    }
+                }
+
+                h1 {
+                    color: $color_3;
+                    font-family: 'Bebas Neue', cursive;
+                    font-size: 130px;
+
+                    @media only screen and (max-width: 40em) {
+                        font-size: 70px;
+                    }
+                }
+
+                h4 {
+                    color: $color_3;
+                    font-family: 'Bebas Neue', cursive;
+                }
+            }
+
+        }
+    }
+}
+
+section {
+    #secciones {
+        padding: 30px 0px 30px 0px;
+
+        .owl-carousel {
+            .panel {
+                height: 180px;
+                border: none;
+            }
+        }
+    }
+
+    #contenedor_proceso {
+        background-image: url(img/fondo_textura.jpg);
+        background-position: center;
+        background-size: cover;
+
+        .contenedor_img {
+            padding: 0;
+            background-image: url(img/img_empresa.jpg);
+            background-position: center;
+            background-size: cover;
+            min-height: 600px;
+            min-width: auto;
+        }
+
+        .contenedor_texto {
+            padding: 30px;
+            margin-top: 5em;
+
+            @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+                padding: 20px;
+                margin-top: 5em;
+                min-height: 500px;
+            }
+
+            @media only screen and (max-width: 40em) {
+                padding: 10px;
+                margin-top: 2em;
+
+            }
+
+            .titulo {
+
+                h1 {
+                    font-size: 80px;
+                }
+
+                h3 {
+                    font-size: 50px;
+                }
+
+                h1,
+                h3 {
+                    font-family: 'Bebas Neue', cursive;
+                    color: $color_2;
+                    line-height: 70%;
+                }
+            }
+
+            p {
+                font-family: 'Lato', sans-serif;
+                color: $color_2;
+            }
+
+            .button {
+                font-family: 'Bebas Neue', cursive;
+                border: 2px solid $color_1;
+                background-color: rgba(0, 0, 0, 0);
+                color: $color_2;
+                border-radius: 5px;
+            }
+
+            .button:hover {
+                font-family: 'Bebas Neue', cursive;
+                border: 2px solid $color_2;
+                background-color: $color_2;
+                color: $color_1;
+                border-radius: 5px;
+            }
+        }
+    }
+
+
+    #contenedor_empresa {
+        background-image: url(img/fondo_textura.jpg);
+        background-position: center;
+        background-size: cover;
+
+        .contenedor_img {
+            padding: 0;
+            background-image: url(img/img_historia.jpg);
+            background-position: center;
+            background-size: cover;
+            min-height: 600px;
+            min-width: auto;
+        }
+
+        .contenedor_texto {
+            padding: 30px;
+            margin-top: 5em;
+
+            @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+                padding: 20px;
+                margin-top: 5em;
+                min-height: 500px;
+            }
+
+            @media only screen and (max-width: 40em) {
+                padding: 10px;
+                margin-top: 2em;
+
+            }
+
+            .titulo {
+
+                h1,
+                h3 {
+                    font-family: 'Bebas Neue', cursive;
+                    font-size: 60px;
+                    color: $color_2;
+                }
+            }
+
+            p {
+                font-family: 'Lato', sans-serif;
+                color: $color_2;
+            }
+
+            .button {
+                font-family: 'Bebas Neue', cursive;
+                border: 2px solid $color_1;
+                background-color: rgba(0, 0, 0, 0);
+                color: $color_2;
+                border-radius: 5px;
+            }
+
+            .button:hover {
+                font-family: 'Bebas Neue', cursive;
+                border: 2px solid $color_2;
+                background-color: $color_2;
+                color: $color_1;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    #contenedor_mercado {
+        background-image: url(img/fondo_textura.jpg);
+        background-position: center;
+        background-size: cover;
+
+        .contenedor_img {
+            padding: 0;
+            background-image: url(img/img_mercado_internacional.jpg);
+            background-position: center;
+            background-size: cover;
+            min-height: 600px;
+            min-width: auto;
+        }
+
+        .contenedor_texto {
+            padding: 30px;
+            margin-top: 5em;
+
+            @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+                padding: 20px;
+                margin-top: 5em;
+                min-height: 500px;
+            }
+
+            @media only screen and (max-width: 40em) {
+                padding: 10px;
+                margin-top: 2em;
+
+            }
+
+
+            .titulo {
+
+                h1 {
+                    font-size: 80px;
+                }
+
+                h3 {
+                    font-size: 50px;
+                }
+
+                h1,
+                h3 {
+                    font-family: 'Bebas Neue', cursive;
+                    color: $color_2;
+                    line-height: 70%;
+                }
+            }
+
+            p {
+                font-family: 'Lato', sans-serif;
+                color: $color_2;
+            }
+
+            .button {
+                font-family: 'Bebas Neue', cursive;
+                border: 2px solid $color_1;
+                background-color: rgba(0, 0, 0, 0);
+                color: $color_2;
+                border-radius: 5px;
+            }
+
+            .button:hover {
+                font-family: 'Bebas Neue', cursive;
+                border: 2px solid $color_2;
+                background-color: $color_2;
+                color: $color_1;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    #banner_pampa {
+        background-image: url(img/img_banner.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 500px;
+    }
+
+    #productos {
+        background-image: url(img/fondo_envases.jpg);
+        background-position: center;
+        background-size: cover;
+        padding: 20px 20px 50px 20px;
+
+        #flexiselDemo3 {
+            display: none;
+            margin-top: 2em;
+        }
+
+        nbs-flexisel-container {
+            position: relative;
+            max-width: 100%;
+        }
+
+        .nbs-flexisel-ul {
+            position: relative;
+            width: 99999px;
+            margin: 0px;
+            padding: 0px;
+            list-style-type: none;
+            text-align: center;
+            overflow: auto;
+        }
+
+        .nbs-flexisel-inner {
+            position: relative;
+            overflow: hidden;
+            float: left;
+            width: 100%;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+        }
+
+        .nbs-flexisel-item {
+            float: left;
+            margin: 0px;
+            padding: 0px;
+            cursor: pointer;
+            position: relative;
+            line-height: 0px;
+        }
+
+        .nbs-flexisel-item img {
+            max-width: 100%;
+            cursor: pointer;
+            position: relative;
+            margin-top: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        /*** Navigation ***/
+
+        .nbs-flexisel-nav-left,
+        .nbs-flexisel-nav-right {
+            padding: 5px 10px;
+            border-radius: 15px;
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            position: absolute;
+            cursor: pointer;
+            z-index: 4;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+
+        .nbs-flexisel-nav-left {
+            left: 10px;
+        }
+
+        .nbs-flexisel-nav-left:before {
+            content: "<"
+        }
+
+        .nbs-flexisel-nav-left.disabled {
+            opacity: 0.4;
+        }
+
+        .nbs-flexisel-nav-right {
+            right: 5px;
+        }
+
+        .nbs-flexisel-nav-right:before {
+            content: ">"
+        }
+
+        .nbs-flexisel-nav-right.disabled {
+            opacity: 0.4;
+        }
+
+        .titulo {
+            margin-top: 3em;
+
+            h1,
+            h3 {
+                font-family: 'Bebas Neue', cursive;
+                font-size: 60px;
+                color: $color_2;
+                line-height: 70%;
+            }
+        }
+
+        p {
+            font-family: 'Lato', sans-serif;
+            color: $color_2;
+            margin-top: 20px;
+        }
+    }
+}
+
+footer {
+    background-color: $color_4;
+    padding-top: 20px;
+
+    .info {
+        .ciudad {
+            color: $color_1;
+        }
+
+        li {
+            color: $color_3;
+            list-style: none;
+            text-align: right;
+            font-family: 'Bebas Neue', cursive;
+        }
+    }
+
+    .logo {
+        object-fit: cover;
+        height: 300px;
+        width: 300px;
+    }
+}
+
+
+#banner_interior {
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 450px;
+
+        @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+            width: 100%;
+            height: 350px;
+        }
+
+        @media only screen and (max-width: 40em) {
+            width: 100%;
+            height: 250px;
+
+        }
+    }
+}
+
+#interior {
+    margin-top: 3em;
+    margin-bottom: 3em;
+
+    .titulo {
+        margin-top: 3em;
+
+        h1,
+        h3 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 60px;
+            color: $color_2;
+            line-height: 70%;
+        }
+    }
+
+    p {
+        font-family: 'Lato', sans-serif;
+        color: $color_2;
+        margin-top: 20px;
+    }
 }

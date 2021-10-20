@@ -89,36 +89,51 @@
 <body>
 
     <header>
-        <div class="row full collapse" id="orbit">
-            <div class="large-12 medium-12 small-12 columns contenedor_orbit">
+        <div class="row full collapse">
+            <div class="large-12 medium-12 small-12 columns">
+                <div id="menu">
+                    <hr>
+                    <nav class="top-bar" data-topbar role="navigation">
+                        <ul class="title-area">
+                            <li class="name">
+                                <h1><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/simunovic_logo.png" alt=""></a></h1>
+                            </li>
 
-                <div class="texto text-center">
-                    <img src="<?php bloginfo('template_directory'); ?>/img/icon_aike.png" alt="" class="icon">
-                    <h1>descubre el mundo</h1>
-                    <h3>con AIKE TOURS</h3>
+                            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+                        </ul>
+                        <section class="top-bar-section">
+                            <!-- Right Nav Section -->
+                            <ul class="right">
+                                <li><a href="#">Nuestro origen</a></li>
+                                <li><a href="#">Proceso y calidad</a></li>
+                                <li><a href="#">productos</a></li>
+                                <li><a href="#">blog</a></li>
+                                <li class="activo"><a href="#">contacto</a></li>
+                            </ul>
+                        </section>
+                    </nav>
+                </div>
+                <div class="textura_slider">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/textura_slider.png" alt="">
                 </div>
 
-                <div class="fondo">
-                    <img src="<?php bloginfo('template_directory'); ?>/img/fondo_slider_borde.png" alt="">
+                <div class="contenedor_slider">
+                    <div class="texto_slider">
+                        <div class="large-11 medium-12 small-12 columns large-centered medium-centered small-centered">
+                            <div class="texto">
+                                <h2><span>|</span> Bienvenidos</h2>
+                                <h1>simunovic</h1>
+                                <h4>lorem lorem lorem</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="degradado"></span>
+                    <ul class="example-orbit" data-orbit data-options="bullets:false;slide_number:false;animation:fade">
+                        <li>
+                            <img src="<?php bloginfo('template_directory'); ?>/img/img_slider.jpg" alt="">
+                        </li>
+                    </ul>
                 </div>
-
-
-                <ul class="example-orbit" data-orbit data-options="bullets:false;slide_number:false;animation:fade">
-
-                    <li>
-                        <img src="<?php bloginfo('template_directory'); ?>/img/slider_001.png" alt="slide 1" />
-                    </li>
-
-
-                    <li>
-                        <img src="<?php bloginfo('template_directory'); ?>/img/slider_002.png" alt="slide 2" />
-                    </li>
-
-
-                    <li>
-                        <img src="<?php bloginfo('template_directory'); ?>/img/slider_003.png" alt="slide 3" />
-                    </li>
-                </ul>
 
             </div>
         </div>
